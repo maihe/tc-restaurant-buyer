@@ -1,2 +1,5 @@
-# tc-restaurant-buyer
-Project to exercise our skills in Java Software Archtecture using Java - Module 1
+# Tech Challenge - 2ADJT
+Fase 1
+
+## Event Storming
+[Miro](https://miro.com/app/board/uXjVOXLcUnw=/?share_link_id=171517775181)
