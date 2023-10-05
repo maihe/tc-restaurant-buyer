@@ -1,5 +1,6 @@
 - Entidades
     - Produto
+        -- uuid ou id do restaurante que cadastrou
         -- nome
         -- quantidade
         -- unidade medida
