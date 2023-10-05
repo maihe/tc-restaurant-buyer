@@ -1,0 +1,27 @@
+- Entidades
+    - Produto
+        -- nome
+        -- quantidade
+        -- unidade medida
+        -- qnt maxima
+        -- qnt minima
+        -- categoria (limpeza, ingrediente, ?)
+        -- ? lista de marcas preferidas
+    - Usuario
+        -- nome
+        -- usuario
+        -- senha
+        -- tipo (adm, cliente)
+    - Compra
+        -- lista de produtos
+        -- valor total
+        -- data de entrega
+        -- fornecedor
+    - Fornecedor
+        -- nome
+        -- cnpj
+    - Restaurante
+        -- nome
+        -- cnpj
+        -- lista de usuarios
+        -- valor maximo pré autorizado
