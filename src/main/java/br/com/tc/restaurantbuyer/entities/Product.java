@@ -21,5 +21,5 @@ public class Product {
 
     //TODO podemos usar string, tabela de dominio, ou enum
     private String category;
-    private Category categoryAsEnum;
+    //private Category categoryAsEnum;
 }
