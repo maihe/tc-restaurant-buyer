@@ -18,6 +18,7 @@
         -- valor total
         -- data de entrega
         -- fornecedor
+        -- restaurante
     - Fornecedor
         -- nome
         -- cnpj
