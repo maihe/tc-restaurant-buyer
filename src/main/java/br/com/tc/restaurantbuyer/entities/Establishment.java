@@ -3,12 +3,10 @@ package br.com.tc.restaurantbuyer.entities;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.util.List;
-import java.util.function.Supplier;
 
 @Entity
-public class Restaurant {
+public class Establishment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
