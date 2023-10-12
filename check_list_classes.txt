@@ -8,22 +8,29 @@
         -- qnt minima
         -- categoria (limpeza, ingrediente, ?)
         -- ? lista de marcas preferidas
-    - Usuario
-        -- nome
-        -- usuario
-        -- senha
-        -- tipo (adm, cliente)
+
     - Compra
         -- lista de produtos
         -- valor total
         -- data de entrega
         -- fornecedor
         -- restaurante
+
+    - Usuario
+            -- nome
+            -- usuario
+            -- senha
+            -- papel (adm, cliente)
     - Fornecedor
         -- nome
         -- cnpj
-    - Restaurante
+        -- lista de usuarios
+
+    - Cliente
         -- nome
         -- cnpj
         -- lista de usuarios
         -- valor maximo pré autorizado
+    - Comprador
+        -- lista de usuarios
+
