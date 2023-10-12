@@ -5,37 +5,46 @@
 ```mermaid
 erDiagram
     
-    PRODUCT }o--|{ PURCHASE-ORDER : "possui"
-    
+    PRODUCT ||--o{ PURCHASE-ORDER-PRODUCT : "pertence"
+
     PRODUCT {
         long productId
-        string restaurantUuid
-        string name
-        int quantity
+        string name        
         string units
-        int maxQuantity
-        int minQuantity
         string category
     }
-    
-    PURCHASE-ORDER }o--|| RESTAURANT : "é feito por"
-    
-    PURCHASE-ORDER }o--|| SUPPLIER : "é entregue por"
-    
+
+    PRODUCT-CUSTOMER {
+        long productId
+        long customerId
+        int quantity
+        int minQuantity
+        int maxQuantity        
+    }
+
+    PURCHASE-ORDER-PRODUCT }|--|| PURCHASE-ORDER : "possui"
+
+    PURCHASE-ORDER-PRODUCT{
+        long purchaseOrderId
+        long productId
+        int quantityBuy
+        int price
+    }
+   
     PURCHASE-ORDER {
         long purchaseOrderId
+        long customerId   
         long totalValue
+        datetime createDate
         datetime deliveryDate
     } 
     
-    RESTAURANT {
-        long restaurantId        
+    CUSTOMER {
+        long customerId        
         string cnpj
         long authorizedBudget
     }
-
-    USER }o--|| RESTAURANT : "possui"
-    
+       
     USER {
         long userId
         string name
