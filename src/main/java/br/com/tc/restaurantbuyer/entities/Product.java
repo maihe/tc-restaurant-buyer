@@ -1,6 +1,5 @@
 package br.com.tc.restaurantbuyer.entities;
 
-import br.com.tc.restaurantbuyer.entities.enums.Category;
 import jakarta.persistence.*;
 
 @Entity
