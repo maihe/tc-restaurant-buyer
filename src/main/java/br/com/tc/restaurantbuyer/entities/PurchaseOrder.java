@@ -21,8 +21,8 @@ public class PurchaseOrder {
     private LocalDate deliveryDate;
 
     @ManyToOne
-    @JoinColumn(name = "restaurant_id")
-    private Restaurant restaurant;
+    @JoinColumn(name = "establishment_id")
+    private Establishment establishment;
 
     @ManyToOne
     @JoinColumn(name = "supplier_id")
