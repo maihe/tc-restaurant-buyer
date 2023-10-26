@@ -11,10 +11,10 @@ public class ProductCustomer {
     private Long productId;
     @Column(name = "customer_id")
     private Long customerId;
+    @Column(name = "quantity")
     private Integer quantity;
     @Column(name = "max_quantity")
     private Integer maxQuantity;
-
     @Column(name = "min_quantity")
     private Integer minQuantity;
 
