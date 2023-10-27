@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ProductRepository extends PagingAndSortingRepository<Product, Long>, CrudRepository<Product,Long> {
+public interface ProductRepository extends PagingAndSortingRepository<Product, Long> {
     List<Product> findAllByNameLikeIgnoreCase(String name);
 }

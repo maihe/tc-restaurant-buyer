@@ -7,13 +7,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table(name = "customer")
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    @OneToMany(mappedBy ="customer", cascade = CascadeType.ALL)
-    private List<UserClient> userClient = new ArrayList<>();
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long customerId;
     private String cnpj;
     private BigDecimal authorizedBudget;
+    private String address;
+    private String name;
+    private String email;
 
+    @OneToMany(mappedBy ="customer")
+    private Set<ProductCustomer> productCustomers;
 }

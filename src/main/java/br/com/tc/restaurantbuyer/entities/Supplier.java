@@ -8,7 +8,8 @@ public class Supplier {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "supplier_id")
     private long id;
-    @Column(name = "cnpj")
     private String cnpj;
-
+    private String address;
+    private String name;
+    private String email;
 }

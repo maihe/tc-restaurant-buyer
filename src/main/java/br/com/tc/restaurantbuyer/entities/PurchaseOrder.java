@@ -9,16 +9,12 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Table(name = "product_order")
+@Data
 @Entity
 public class PurchaseOrder {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<PurchaseOrderProduct> purchaseOrderProductList;
-    private BigDecimal totalValue;
-    private LocalDate deliveryDate;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long purchase_order_id;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
@@ -28,8 +24,12 @@ public class PurchaseOrder {
     @JoinColumn(name = "supplier_id")
     private Supplier supplier;
 
-    @CreatedDate
-    private LocalDateTime createDate;
-    @LastModifiedDate
-    private LocalDateTime updateDate;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    private Long totalValue;
+    private Date createDate;
+    private Date deliveryDate;
+    private String status;
 }

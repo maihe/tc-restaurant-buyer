@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface UserRepository extends PagingAndSortingRepository<UserClient, Long>, CrudRepository<UserClient, Long> {
+public interface UserRepository extends PagingAndSortingRepository<UserClient, Long> {
     List<UserClient> findAllByRole(String role);
 }

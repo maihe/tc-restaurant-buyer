@@ -9,12 +9,17 @@ public class PurchaseOrderProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @Column(name = "product_id")
-    private Long product;
-    @Column(name = "purchase_order_id")
-    private Long purchaseOrderId;
-    private Integer quantityBuy;
+
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product product;
+
+    @ManyToOne
+    @JoinColumn(name = "purchase_order_id")
+    private PurchaseOrder purchaseOrder;
+
+    private Integer quantity;
+
     @Column(name = "price")
     private BigDecimal price;
-
 }
