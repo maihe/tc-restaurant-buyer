@@ -1,9 +1,12 @@
 package br.com.tc.restaurantbuyer.dto;
 
-public class CustomerDTO(
-    private Long customerId,
-    private String cnpj,
-    private BigDecimal authorizedBudget,
-    private String address,
-    private String name,
-    private String email) {}
+import java.math.BigDecimal;
+
+public record CustomerDTO(
+        Long customerId,
+        String cnpj,
+        BigDecimal authorizedBudget,
+        String address,
+        String name,
+        String email) {
+}
