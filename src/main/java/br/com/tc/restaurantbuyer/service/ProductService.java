@@ -21,8 +21,8 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public List<ProductDTO> listAllProductsFromRestaurant(String uuid){
-        productRepository.findAllByRestaurantUuid(uuid);
+    public List<ProductDTO> listAllProduct(String name) {
+        productRepository.findAllByNameLikeIgnoreCase(name);
         //construir mapper
         return new ArrayList<ProductDTO>();
     }

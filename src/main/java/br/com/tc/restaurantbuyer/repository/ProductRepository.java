@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface ProductRepository extends PagingAndSortingRepository<Product, Long>, CrudRepository<Product,Long> {
-    List<Product> findAllByRestaurantUuid(String restaurantUuid);
+    List<Product> findAllByNameLikeIgnoreCase(String name);
 }
