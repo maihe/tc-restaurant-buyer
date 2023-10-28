@@ -1,12 +1,12 @@
 # Tech Challenge - 2ADJT
-Fase 1
+## Fase 1
 <!-- TOC -->
 * [Tech Challenge - 2ADJT](#tech-challenge---2adjt)
     * [Problema](#problema)
         * [As-is](#as-is)
         * [Objetivo (to-be)](#objetivo-to-be)
     * [Event Storming](#event-storming)
-    * [Desing de Arquitetura](#desing-de-arquitetura)
+    * [Arquitetura](#arquitetura)
 <!-- TOC -->
 ## Problema
 
@@ -19,15 +19,14 @@ Cada fornecedor tem um valor mínimo de compra para ser entregue, ou seja, para 
 Neste cenário não temos escalabilidade.
 
 ### Objetivo (to-be)
-- V1 (verificar nomenclatura)
-    - O restaurante ter acesso à uma plataforma onde ele possa se conectar e definir uma lista de produtos do seu estoque e um estoque mínimo de cada item. Além da criaçao do estoque, um funcionário do restaurante podera modificar a quantidade do estoque de cada item quando fizer o inventario
-      A compradora ter acesso à mesma plataforma  para inserir os fornecedores e os preços de cada produto para cada fornecedor. (política: O preço tem uma data de expiração).
-      A compradora é notificada quando um ou mais produtos atingem o minimo necessario no estoque. Entao ela compara o preço deste produto para cada fornecedor, seleciona o melhor fornecedor para cada item e cria um pedido de compra. O receber o pedido de compra o fornecedor trata diretamente com o restaurante para a entrega e o pagamento. Uma vez o pedido entregue, o restaurante confirma a recepcao na plataforma e o estoque é atualizado.
-- V2
-    - A compra ser efetuada automaticamente, desde que dentro de um valor maximo estipulado pelo restaurante, senão, fica em status aguardando confirmação (essa fase pode exigir descrever forma de pagamento e comprovação)
+- Minimum Viable Product (MVP)
+    - O restaurante tem acesso à uma plataforma onde ele pode se conectar e definir uma lista de produtos do seu estoque e um estoque mínimo de cada item. Além da criação do estoque, um funcionário do restaurante poderá modificar a quantidade do estoque de cada item quando fizer o inventário A compradora terá acesso à mesma plataforma para inserir os fornecedores e os preços de cada produto para cada fornecedor. (política: O preço tem uma data de expiração). A compradora é notificada quando um ou mais produtos atingem o mínimo necessário no estoque. Então ela compara o preço deste produto para cada fornecedor, seleciona o melhor fornecedor para cada item e cria um pedido de compra. Ao receber o pedido de compra o fornecedor trata diretamente com o restaurante para a entrega e o pagamento. Uma vez o pedido entregue, o restaurante confirma a recepção na plataforma e o estoque é atualizado.
+- Versão futura (Backlog)
+    - A compra ser efetuada automaticamente, desde que dentro de um valor máximo estipulado pelo restaurante, senão, fica em status aguardando confirmação (essa fase pode exigir descrever forma de pagamento e comprovação)
 
 ## Event Storming
 [Miro](https://miro.com/app/board/uXjVOXLcUnw=/?share_link_id=171517775181)
 
-## Desing de Arquitetura
+## Arquitetura
+![](docs/arquitetura.png)
 
