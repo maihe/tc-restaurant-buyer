@@ -10,9 +10,9 @@ erDiagram
     CUSTOMER ||--|{ PRODUCT-CUSTOMER : "possui"
     CUSTOMER ||--|{ PURCHASE-ORDER : "possui"
     SUPPLIER ||--|{ PURCHASE-ORDER : "faz parte"
-    USER ||--o{ PURCHASE-ORDER : "faz"
-    USER }|--|| ROLE : "is"
-    USER }o--|| CUSTOMER : "tem"
+    USERCLIENT ||--o{ PURCHASE-ORDER : "faz"
+    USERCLIENT }|--|| ROLE : "is"
+    USERCLIENT }o--|| CUSTOMER : "tem"
 
 
     PRODUCT {
