@@ -16,7 +16,7 @@ erDiagram
 
 
     PRODUCT {
-        long productId
+        long id
         string name
         string units
         string category
@@ -33,6 +33,7 @@ erDiagram
 
 
     PURCHASE-ORDER-PRODUCT{
+        long id
         long purchaseOrderId
         long productId
         int quantityBuy
@@ -41,7 +42,7 @@ erDiagram
 
 
     PURCHASE-ORDER {
-        long purchaseOrderId
+        long id
         long customerId
         long supplierId
         long userId
@@ -53,13 +54,13 @@ erDiagram
 
 
     CUSTOMER {
-        long customerId
+        long id
         string cnpj
         long authorizedBudget
     }
 
-    USER {
-        long userId
+    USERCLIENT {
+        long id
         string name
         string login
         string password
@@ -68,13 +69,13 @@ erDiagram
     }
 
     ROLE {
-        long idRole
+        long id
         string name
         string level
     }
 
     SUPPLIER {
-        long supplierId
+        long id
         string cnpj
     }
 ```

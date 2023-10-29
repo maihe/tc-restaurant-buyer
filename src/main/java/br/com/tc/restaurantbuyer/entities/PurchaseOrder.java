@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Table(name = "product_order")
+@Table(name = "purchase_order")
 @Entity
 public class PurchaseOrder {
     @Id

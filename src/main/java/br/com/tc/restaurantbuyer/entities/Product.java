@@ -2,6 +2,7 @@ package br.com.tc.restaurantbuyer.entities;
 
 import jakarta.persistence.*;
 
+@Table(name = "product")
 @Entity
 public class Product {
     @Id
