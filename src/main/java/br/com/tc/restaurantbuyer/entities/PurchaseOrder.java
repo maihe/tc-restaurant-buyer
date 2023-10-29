@@ -15,19 +15,15 @@ public class PurchaseOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<PurchaseOrderProduct> purchaseOrderProductList;
     private BigDecimal totalValue;
     private LocalDate deliveryDate;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
-    private Customer customer;
-
+    private Customer customerId;
     @ManyToOne
     @JoinColumn(name = "supplier_id")
-    private Supplier supplier;
-
+    private Supplier supplierId;
     @CreatedDate
     private LocalDateTime createDate;
     @LastModifiedDate
