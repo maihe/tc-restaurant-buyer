@@ -7,6 +7,7 @@
         * [Objetivo (to-be)](#objetivo-to-be)
     * [Event Storming](#event-storming)
     * [Arquitetura](#arquitetura)
+    * [Modelo Entidade Relacionamento](#modelo-entidade-relacionamento)
 <!-- TOC -->
 ## Problema
 
