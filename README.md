@@ -28,5 +28,7 @@ Neste cenário não temos escalabilidade.
 [Miro](https://miro.com/app/board/uXjVOXLcUnw=/?share_link_id=171517775181)
 
 ## Arquitetura
-![](docs/arquitetura.png)
+![](DOCS/arquitetura.png)
 
+## Modelo Entidade Relacionamento
+[Modelo-ER](DOCS/modelo-er.md)
