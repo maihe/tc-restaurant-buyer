@@ -17,7 +17,6 @@ public class UserService {
     private static final String DEFAULT_PWD = "234";
     private final UserRepository userRepository;
 
-    //Construtor para testar sugestao de boas praticas de injecao
     @Autowired
     public UserService(UserRepository userRepository) {
         log.info("");
@@ -25,7 +24,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public List<UserDTO> listAllUsersFromRole(String role) {
+    public List<UserDTO> listAllUser(String role) {
         log.info("Find all users with parameters {}", role);
         List<UserClient> usersLists;
         if (null != role) {

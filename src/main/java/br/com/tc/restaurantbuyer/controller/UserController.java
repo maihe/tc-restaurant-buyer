@@ -4,9 +4,9 @@ import br.com.tc.restaurantbuyer.dto.UserDTO;
 import br.com.tc.restaurantbuyer.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -14,8 +14,13 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserController {
 
-    @Autowired
     UserService userService;
+
+    @Autowired
+    public UserController(UserService userService) {
+        Assert.notNull(userService, "UserService must not be null!");
+        this.userService = userService;
+    }
 
     @GetMapping
     public List<UserDTO> listAllUsersWithParams(@RequestParam(required = false) String role) {
@@ -24,7 +29,7 @@ public class UserController {
         //exampleUsers.add(userDTO);
         //return exampleUsers;
         log.debug("Find all users");
-        return userService.listAllUsersFromRole(role);
+        return userService.listAllUser(role);
     }
 
     @PostMapping

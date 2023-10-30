@@ -1,8 +1,12 @@
 package br.com.tc.restaurantbuyer.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
+@NoArgsConstructor
 public class ProductCustomer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,4 +22,11 @@ public class ProductCustomer {
     @Column(name = "min_quantity")
     private Integer minQuantity;
 
+    public ProductCustomer(Long productId, Long customerId, int quantity, Integer maxQuantity, Integer minQuantity) {
+        this.productId = productId;
+        this.customerId = customerId;
+        this.quantity = quantity;
+        this.maxQuantity = maxQuantity;
+        this.minQuantity = minQuantity;
+    }
 }
