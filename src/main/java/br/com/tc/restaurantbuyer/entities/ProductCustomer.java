@@ -21,12 +21,15 @@ public class ProductCustomer {
     private Integer maxQuantity;
     @Column(name = "min_quantity")
     private Integer minQuantity;
+    @Column(name = "obs")
+    private String obs;
 
-    public ProductCustomer(Long productId, Long customerId, int quantity, Integer maxQuantity, Integer minQuantity) {
+    public ProductCustomer(Long productId, Long customerId, int quantity, Integer maxQuantity, Integer minQuantity, String obs) {
         this.productId = productId;
         this.customerId = customerId;
         this.quantity = quantity;
         this.maxQuantity = maxQuantity;
         this.minQuantity = minQuantity;
+        this.obs = obs;
     }
 }

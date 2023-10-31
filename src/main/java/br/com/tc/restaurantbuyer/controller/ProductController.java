@@ -1,7 +1,7 @@
 package br.com.tc.restaurantbuyer.controller;
 
 import br.com.tc.restaurantbuyer.dto.ProductDTO;
-import br.com.tc.restaurantbuyer.entities.ProductCustomer;
+import br.com.tc.restaurantbuyer.entities.Product;
 import br.com.tc.restaurantbuyer.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class ProductController {
         this.productService = productService;
     }
     @GetMapping
-    public List<ProductCustomer> listAllProducts(@PathVariable("customerId") Long customerId) {
+    public List<Product> listAllProducts(@PathVariable("customerId") Long customerId) {
         //List<ProductDTO> exampleProducts = new ArrayList<>();
         //ProductDTO  productDTO1 = new ProductDTO("Macarrao Barilla", "pct", 10,2,
         //        "mantinmentos", "Substituir por Adria");
