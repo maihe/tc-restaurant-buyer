@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Table(name = "product_customer")
 @Entity
 @Data
 @NoArgsConstructor
