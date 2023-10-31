@@ -2,7 +2,6 @@ package br.com.tc.restaurantbuyer.service;
 
 import br.com.tc.restaurantbuyer.dto.ProductDTO;
 import br.com.tc.restaurantbuyer.entities.Product;
-import br.com.tc.restaurantbuyer.entities.ProductCustomer;
 import br.com.tc.restaurantbuyer.repository.ProductRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,16 +25,15 @@ public class ProductService {
         this.productCustomerService = productCustomerService;
     }
 
-    public List<ProductCustomer> listAllProduct(Long customerId) {
-        return productCustomerService.listAllProductCustomer(customerId);
-        //construir mapper
+    public List<Product> listAllProduct(Long id) {
+        return productRepository.findAllByCustomerId(id);
     }
 
     public ProductDTO createProduct(ProductDTO productDTO, Long customerId) {
         log.info("Creating Product {} ", productDTO.toString());
         try {
             Product product = productRepository.save(toProduct(productDTO));
-            productDTO = toProductDTO(product);
+            //productDTO = toProductDTO(product);
             productCustomerService.createProduct(productDTO, customerId, product.getId());
 
         } catch (Exception e) {

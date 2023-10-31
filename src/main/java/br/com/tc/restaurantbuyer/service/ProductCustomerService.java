@@ -24,6 +24,7 @@ public class ProductCustomerService {
     }
 
     public List<ProductCustomer> listAllProductCustomer(Long customerId) {
+        //return productCustomerRepository.findAllProductSQLByCustomerId(customerId);
         return productCustomerRepository.findAllByCustomerId(customerId);
         //construir mapper
     }
@@ -47,6 +48,7 @@ public class ProductCustomerService {
                 customerId,
                 1,
                 productDTO.maxQuantity(),
-                productDTO.minQuantity());
+                productDTO.minQuantity(),
+                productDTO.obs());
     }
 }
