@@ -2,6 +2,7 @@
 ## Fase 1
 <!-- TOC -->
 * [Tech Challenge - 2ADJT](#tech-challenge---2adjt)
+    * [Especificação](#especificação)
     * [Problema](#problema)
         * [As-is](#as-is)
         * [Objetivo (to-be)](#objetivo-to-be)
@@ -9,6 +10,15 @@
     * [Arquitetura](#arquitetura)
     * [Modelo Entidade Relacionamento](#modelo-entidade-relacionamento)
 <!-- TOC -->
+
+## Especificação
+
+| Tecnologia | Versão |
+|------------|--------|
+| Java       | 17     | 
+| Maven      |        | 
+| H2         |        |
+
 ## Problema
 
 Uma empresa de compras, precisa gerenciar o estoque de uma variedade de restaurantes. E a partir disto, fazer a gestão de diversos fornecedores e efetivar a melhor compra.
