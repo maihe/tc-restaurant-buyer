@@ -21,3 +21,7 @@
 
 O documento pode ser lido online
 no [Google Drive](https://docs.google.com/document/d/13soj-Fo0VNw1c9wF_B2q97aBrvKx17W469klTrhTSfI/edit?usp=sharing)
+
+## Modelo ER em Mermaid
+
+[Modelo-ER](DOCS/modelo-er.md)
